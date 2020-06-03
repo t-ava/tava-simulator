@@ -4,10 +4,8 @@ import json
 
 
 # target = "log_1591166747.json"
-target = "log_1591169262_mechanism_1.json"
-# target = "log_1567608579_mechanism_1.json"
-# target = "log_1567608704_mechanism_2.json"
-# target  = "log_1567609089_mechanism_3.json"
+# target = "log_1591169262_mechanism_1.json"
+target = "log_1591170934_mechanism_2.json"
 
 PATH = "./logs/" + target
 
