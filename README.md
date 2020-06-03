@@ -1,5 +1,5 @@
 # tava-simulator
-Simulator for finding the best hyper-parameters of tava.
+Simulator for finding the best hyper-parameters of Tava
 
 # How to use
 
