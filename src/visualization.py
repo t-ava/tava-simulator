@@ -1,11 +1,29 @@
 from matplotlib import pyplot as plt
 import numpy as np
 import json
+import argparse
 
+
+def parser():
+    parser = argparse.ArgumentParser(description='Name of log file')
+    parser.add_argument('--log', metavar='L', type=str, default="",
+                        help='name of log file')
+    parser.add_argument('--show', action='store_true', default=False,
+                        help='show figs')
+
+    args = parser.parse_args()
+    return args
+
+
+args = parser()
+print("> Setting:", args)
 
 # target = "log_1591166747.json"
 # target = "log_1591169262_mechanism_1.json"
-target = "log_1591170934_mechanism_2.json"
+# target = "log_1591170934_mechanism_2.json"
+target = args.log
+if target == "":
+    raise("Input valid log file.")
 
 PATH = "./logs/" + target
 
@@ -41,8 +59,9 @@ if __name__ == "__main__":
             ylabel='Number',
             title='# of bankrupts')
         # ax.grid()
-        # fig.savefig("test.png")
-        plt.show()
+        fig.savefig(PATH[:-5] + "_" + "bankrupts.png")
+        if args.show:
+            plt.show()
 
         """log_total_incentive"""
         y = log_total_incentive
@@ -53,8 +72,9 @@ if __name__ == "__main__":
             ylabel='Token',
             title='total incentive')
         # ax.grid()
-        # fig.savefig("test.png")
-        plt.show()
+        fig.savefig(PATH[:-5] + "_" + "incentive.png")
+        if args.show:
+            plt.show()
 
         """log_total_fee"""
         y = log_total_fee
@@ -65,8 +85,9 @@ if __name__ == "__main__":
             ylabel='Token',
             title='total fee')
         # ax.grid()
-        # fig.savefig("test.png")
-        plt.show()
+        fig.savefig(PATH[:-5] + "_" + "fee.png")
+        if args.show:
+            plt.show()
 
         """log_balance"""
         y = log_balance
@@ -77,5 +98,6 @@ if __name__ == "__main__":
             ylabel='Token',
             title='sum of user balances')
         # ax.grid()
-        # fig.savefig("test.png")
-        plt.show()
+        fig.savefig(PATH[:-5] + "_" + "balance.png")
+        if args.show:
+            plt.show()

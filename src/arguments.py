@@ -12,10 +12,6 @@ def parser():
                         help='default rent fee')
     parser.add_argument('--additional', metavar='A', type=int, default=200,
                         help='additional fee per 1h')
-
-    """params"""
-    parser.add_argument('--balance', metavar='B', type=int, default=10**6,
-                        help='default balance')
     parser.add_argument('--time', metavar='T', type=int, default=1,
                         help='default rent time')
 
@@ -24,11 +20,12 @@ def parser():
     parser.add_argument('--missing', metavar='M', type=float, default=0.03,
                         help='missing ratio')
 
-    """simulation"""
     parser.add_argument('--users', metavar='U', type=int, default=100,
                         help='number of users')
     parser.add_argument('--round', metavar='R', type=int, default=1000,
                         help='number of rounds (h)')
+    parser.add_argument('--balance', metavar='B', type=int, default=10**6,
+                        help='default balance')
 
     """mechanism"""
     parser.add_argument('--mechanism', metavar='S', type=int, default=0,
