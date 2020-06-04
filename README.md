@@ -1,5 +1,15 @@
 # tava-simulator
-Simulator for finding the best hyper-parameters of Tava
+Simulator for finding the best hyperparameters of Tava
+
+## What is the best hyperparameter
+
+![searching](./images/searching.png)
+
+A hyperparameter is a parameter whose value is given by nature and used to control the system process. 
+
+In this simulator, user can change some hyperparameter(s) in the Tava system and track metric(s)
+* like income per cost
+* to find best hyperparameters that makes output of metric(s) high (or low) .
 
 # How to use
 
