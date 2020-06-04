@@ -63,29 +63,19 @@ if __name__ == "__main__":
         if args.show:
             plt.show()
 
-        """log_total_incentive"""
-        y = log_total_incentive
+        """log_total_incentive & log_total_fee"""
+        y1 = log_total_incentive
+        y2 = log_total_fee
         fig, ax = plt.subplots()
-        ax.plot(x, y)
+        ax.plot(x, y1, label="incentive")
+        ax.plot(x, y2, label="fee")
+        ax.legend()
         ax.set(
             xlabel='Rounds',
             ylabel='Token',
-            title='total incentive')
+            title='total incentive & fee')
         # ax.grid()
-        fig.savefig(PATH[:-5] + "_" + "incentive.png")
-        if args.show:
-            plt.show()
-
-        """log_total_fee"""
-        y = log_total_fee
-        fig, ax = plt.subplots()
-        ax.plot(x, y)
-        ax.set(
-            xlabel='Rounds',
-            ylabel='Token',
-            title='total fee')
-        # ax.grid()
-        fig.savefig(PATH[:-5] + "_" + "fee.png")
+        fig.savefig(PATH[:-5] + "_" + "incentive_and_fee.png")
         if args.show:
             plt.show()
 

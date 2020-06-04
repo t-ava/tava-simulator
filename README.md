@@ -71,8 +71,7 @@ python src/visualization.py --log="log_1591204931_mechanism_0.json" --show
 
 ![balance](./images/log_1591204931_mechanism_0_balance.png)
 ![bankrupts](./images/log_1591204931_mechanism_0_bankrupts.png)
-![fee](./images/log_1591204931_mechanism_0_fee.png)
-![incentive](./images/log_1591204931_mechanism_0_incentive.png)
+![incentive_and_fee](./images/log_1591204931_mechanism_0_incentive_and_fee.png)
 
 * TODO: auto save figs using logs in `./logs`.
 
@@ -96,7 +95,7 @@ python src/visualization.py --log="log_1591204931_mechanism_0.json" --show
 | Number | Mechanism | Description | Notes |
 | --- | --- | --- | --- |
 | 0 | Linear | y = x * `--coef` | Default |
-| 1 | Power | y = (x ** `--power`) * `--coef` | Default |
-| 2 | Linear | y = (`--exp` ** x) * `--coef` | Default |
+| 1 | Power | y = (x ** `--power`) * `--coef` | - |
+| 2 | Exp. | y = (`--exp` ** x) * `--coef` | - |
 
 More details here: [mechanisms.py](./src/mechanisms.py)
