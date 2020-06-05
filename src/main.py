@@ -1,15 +1,20 @@
 import arguments
-from agent import Agent
-from environment import Env
-from mechanisms import incentive_exp, incentive_power, incentive_linear
 
-import random
-import sys
-import numpy as np
-import time
-import json
-import os
+
+args = arguments.parser()
+print("> Setting:", args)
+
+
 from datetime import datetime, timedelta
+import os
+import json
+import time
+import numpy as np
+import sys
+import random
+from mechanisms import incentive_exp, incentive_power, incentive_linear
+from environment import Env
+from agent import Agent
 
 
 if __name__ == "__main__":
@@ -18,9 +23,6 @@ if __name__ == "__main__":
     dt_time = [dt.month, dt.weekday(), dt.hour]
     num_stations, num_divices = 100, 2
     stations_idx = [i for i in range(num_stations)]  # TODO: locational info.
-
-    args = arguments.parser()
-    print("> Setting:", args)
 
     """log"""
     log_dict = dict()
