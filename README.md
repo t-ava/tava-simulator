@@ -13,6 +13,11 @@ In this simulator, user can change some hyperparameter(s) in the Tava system and
 
 # How to use
 
+## Install requirements
+```
+pip install -r requirements.txt
+```
+
 ## Help
 ```
 python src/main.py -h
